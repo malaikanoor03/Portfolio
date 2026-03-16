@@ -89,7 +89,7 @@ class Particle {
     }
 
     draw(){
-        ctx.fillStyle = "rgba(255,0,0,0.7)";
+        ctx.fillStyle = "rgba(72,98,139,0.8)";
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
@@ -118,7 +118,7 @@ function animateParticles(){
             let dy = particlesArray[a].y - particlesArray[b].y;
             let distance = Math.sqrt(dx*dx + dy*dy);
             if(distance < 120){
-                ctx.strokeStyle = "rgba(255,0,0,0.1)";
+                ctx.strokeStyle = "rgba(72,98,139,0.2)";
                 ctx.lineWidth = 1;
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
@@ -138,8 +138,8 @@ AOS.init();
 const themeBtn = document.getElementById("theme-toggle");
 themeBtn.addEventListener("click", () => {
     document.body.classList.toggle("light-theme");
-    themeBtn.style.background = document.body.classList.contains("light-theme") ? "black" : "red";
-});
+    themeBtn.style.background =
+    document.body.classList.contains("light-theme") ? "#0F172A" : "#48628b";});
 
 // CURSOR TRAIL EFFECT
 const trailCount = 10;
