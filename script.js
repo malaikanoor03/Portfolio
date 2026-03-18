@@ -201,23 +201,23 @@ const modalImg = document.getElementById("modal-img");
 const modalTitle = document.getElementById("modal-title");
 const modalDesc = document.getElementById("modal-desc");
 const modalDemo = document.getElementById("modal-demo");
-const modalCode = document.getElementById("modal-code");
 const closeModal = document.querySelector(".close-modal");
 
 document.querySelectorAll(".projects .card").forEach(card => {
-    card.addEventListener("click", () => {
+    card.addEventListener("click", (e) => {
 
-        const img = card.querySelector("img").src;
+        // Prevent modal if button is clicked
+        if(e.target.tagName === "A") return;
+
+        const img = card.querySelector("img")?.src;
         const title = card.querySelector("h3").innerText;
         const desc = card.querySelector("p").innerText;
 
-        modalImg.src = img;
+        if(img) modalImg.src = img;
         modalTitle.innerText = title;
         modalDesc.innerText = desc;
 
-        // Set modal buttons dynamically from card data attributes
-        modalDemo.href = card.getAttribute("data-demo") || "#";
-        modalCode.href = card.getAttribute("data-code") || "#";
+        modalDemo.href = card.querySelector(".btn-outline")?.href || "#";
 
         modal.style.display = "flex";
     });
