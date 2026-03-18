@@ -12,7 +12,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
     <div id="scroll-progress"></div>
 <canvas id="bgCanvas"></canvas>
 <div class="cursor"></div>
@@ -58,13 +57,25 @@
 </section>
 
 <!-- ABOUT SECTION -->
-<section id="about" data-aos="fade-right">
+<section id="about">
     <h2 class="section-title">About Me</h2>
-    <div class="glass about">
-        <p>Hello, I am Malaika Noor, originally from Pakistan (born in 2003), and currently based in the United Arab Emirates since 2010. I am a multidisciplinary developer with a strong focus on Web Development, driven by a passion for creating modern, efficient, and user-focused digital experiences.
-            My expertise spans multiple areas of technology, including UI/UX Design, Mobile Application Development, Game Development, and IT Solutions. I enjoy working across different domains of software development, allowing me to approach projects with a well-rounded technical perspective and creative problem-solving mindset.
-            I am proficient in a range of industry-standard tools and technologies such as Figma, GitHub, Android Studio, Unity, Canva, and circuit design platforms, which I utilize to design, develop, and deliver functional and visually engaging digital products. My experience includes building responsive websites, developing applications, designing user interfaces, and creating interactive systems.
-            I am particularly passionate about leveraging technology to transform ideas into practical solutions, continuously learning new tools and techniques to stay aligned with evolving industry trends. My goal is to create impactful digital experiences that combine technical precision, creativity, and user-centered design.</p>
+
+    <div class="about-wrapper">
+
+        <!-- LEFT BOX -->
+        <div class="glass about-box left" data-aos="fade-right">
+            <p>
+                Hello, I am Malaika Noor, originally from Pakistan (born in 2003), and currently based in the United Arab Emirates since 2010. I am a multidisciplinary developer with a strong focus on Web Development, driven by a passion for creating modern, efficient, and user-focused digital experiences.
+            </p>
+        </div>
+
+        <!-- RIGHT BOX -->
+        <div class="glass about-box right" data-aos="fade-left">
+            <p>
+                My expertise spans UI/UX Design, Mobile Application Development, Game Development, and IT Solutions. I work with tools like Figma, GitHub, Android Studio, Unity, and more to build responsive, creative, and impactful digital products while continuously learning and evolving.
+            </p>
+        </div>
+
     </div>
 </section>
 
@@ -133,80 +144,70 @@
 
     <div class="filter-buttons">
         <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="unity">Unity</button>
-        <button class="filter-btn" data-filter="python">Python</button>
         <button class="filter-btn" data-filter="web">Web</button>
-        <button class="filter-btn" data-filter="arduino">Arduino</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="unity">Unity</button>
     </div>
 
     <div class="projects">
 
-        <div class="card" data-category="web"
-             data-demo="https://apple-website-five-flax.vercel.app/" 
-             data-code="https://github.com/malaikanoor03/Apple-website.git">
-            <img src="project1.jpg" alt="Apple">
+        <!-- WEB PROJECT -->
+        <div class="card" data-category="web">
+            <img src="project1.jpg" alt="Apple Website">
             <h3>Apple Website</h3>
-            <p>A clean, responsive business website inspired by Apple’s design language. Includes modern UI components and smooth navigation.</p>
+            <p>A clean, responsive business website inspired by Apple’s design language.<br><b>Tech:</b> HTML, CSS, JS</p>
             <div class="project-buttons">
                 <a href="https://apple-website-five-flax.vercel.app/" target="_blank" class="btn-outline">View Site</a>
-                <a href="https://github.com/malaikanoor03/Apple-website.git" target="_blank" class="btn-outline">Source Code</a>
             </div>
         </div>
 
-        <div class="card" data-category="unity" 
-             data-demo="https://youtu.be/Q_lcoeq6sMs" 
-             data-code="https://github.com/malaikanoor03/Unity2D-Game-BulletTime">
-            <img src="project2.jpg" alt="Bullet Time">
+        <!-- UNITY GAME -->
+        <div class="card" data-category="unity">
+            <img src="project2.jpg" alt="Bullet Time Game">
             <h3>Bullet Time</h3>
-            <p>Fast-paced Unity 2D action game featuring enemy AI, traps, and health system.</p>
+            <p>Fast-paced Unity 2D action game with enemy AI, traps, and health system.<br><b>Tech:</b> Unity, C#</p>
             <div class="project-buttons">
-                <a href="https://youtu.be/Q_lcoeq6sMs" target="_blank" class="btn-outline">View Demo</a>
-                <a href="https://github.com/malaikanoor03/Unity2D-Game-BulletTime" target="_blank" class="btn-outline">Source Code</a>
+                <a href="https://youtu.be/Q_lcoeq6sMs" target="_blank" class="btn-outline">Watch Demo</a>
             </div>
         </div>
 
-        <div class="card" data-category="web" 
-             data-demo="https://qannas-services.vercel.app/index.html" 
-             data-code="https://github.com/malaikanoor03/qannas-services.git">
-            <img src="project3.jpg" alt="Qannas">
+        <!-- WEB PROJECT -->
+        <div class="card" data-category="web">
+            <img src="project3.jpg" alt="Qannas Website">
             <h3>Qannas Website</h3>
-            <p>A modern web platform for Qannas Services showcasing their offerings with interactive sections and responsive design.</p>
+            <p>Modern web platform showcasing services interactively.<br><b>Tech:</b> HTML, CSS, JS</p>
             <div class="project-buttons">
                 <a href="https://qannas-services.vercel.app/index.html" target="_blank" class="btn-outline">Visit Site</a>
-                <a href="https://github.com/malaikanoor03/qannas-services.git" target="_blank" class="btn-outline">Source Code</a>
             </div>
         </div>
 
-        <div class="card" data-category="arduino" 
-             data-demo="#" 
-             data-code="#">
-            <img src="project4.jpg" alt="Arduino Project">
-            <h3>Arduino Smart System</h3>
-            <p>Innovative Arduino-based university project integrating sensors and automation.</p>
+        <!-- AI PROJECT -->
+        <div class="card" data-category="ai">
+            <img src="project4.jpg" alt="Solar PV Prediction">
+            <h3>Solar PV Prediction</h3>
+            <p>Machine learning model predicting solar PV output.<br><b>Tech:</b> Python, SKlearn</p>
             <div class="project-buttons">
-                <a href="#" class="btn-outline">View Details</a>
+                <a href="https://youtu.be/wHWaQJT32Qw" target="_blank" class="btn-outline">Watch Demo</a>
             </div>
         </div>
 
-        <div class="card" data-category="python" 
-             data-demo="#" 
-             data-code="https://github.com/DC-BSU-RAK/projects-collection-2025-malaikanoor03">
-            <img src="project5.jpg" alt="Smartphone APP">
-            <h3>Smart Phone Application</h3>
-            <p>A Python GUI application featuring a shopping app interface and a nano calculator for coffee measurements. Integrates API data and demonstrates object-oriented programming with interactive UI.</p>
+        <!-- MOBILE APP -->
+        <div class="card" data-category="mobile">
+            <img src="project5.jpg" alt="Smartphone App">
+            <h3>Smartphone App</h3>
+            <p>Python GUI-based shopping app with a nano calculator.<br><b>Tech:</b> Python, Tkinter</p>
             <div class="project-buttons">
-                <a href="https://github.com/DC-BSU-RAK/projects-collection-2025-malaikanoor03" target="_blank" class="btn-outline">Source Code</a>
+                <a href="https://youtu.be/E-Qi8ntDvwY" target="_blank" class="btn-outline">Watch Demo</a>
             </div>
         </div>
-
-        <div class="card" data-category="python" 
-             data-demo="#" 
-             data-code="https://github.com/CodeLab-II/skills-portfolio-malaikanoor03/tree/7c57e0d87c14423bcdad23adef3b045d19a40623/A2%20-%20DDA">
-            <img src="project6.jpg" alt="Trivia App">
+        <!-- AI PROJECT -->
+        <div class="card" data-category="ai">
+            <img src="project6.jpg" alt="Trivia Data App">
             <h3>Trivia Data App</h3>
-            <p>Interactive trivia application with data-driven functionality and UI design.</p>
+            <p>Interactive trivia application with data-driven functionality.<br><b>Tech:</b> Python</p>
             <div class="project-buttons">
-                <a href="https://github.com/CodeLab-II/skills-portfolio-malaikanoor03/tree/7c57e0d87c14423bcdad23adef3b045d19a40623/A2%20-%20DDA" target="_blank" class="btn-outline">Source Code</a>
+                <a href="https://youtu.be/b5ICMz6skk0" target="_blank" class="btn-outline">Watch Demo</a>
             </div>
         </div>
 
